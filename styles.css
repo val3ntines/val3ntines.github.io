@@ -6,12 +6,13 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #ffdde1, #ee9ca7);
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Cute Container */
@@ -22,8 +23,8 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     animation: float 3s ease-in-out infinite;
-    width: 100%;
-    max-width: 600px; /* Adjust to ensure it doesn't stretch too much */
+    width: 90%;
+    max-width: 600px;
 }
 
 /* Floating Animation */
@@ -39,7 +40,7 @@ h1 {
     color: #ff4081;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    word-wrap: break-word; /* Ensures proper text wrapping */
+    word-wrap: break-word;
 }
 
 /* Buttons */
@@ -61,7 +62,6 @@ button {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     outline: none;
-    width: auto;
 }
 
 /* Yes Button - Lavender Love */
@@ -116,6 +116,12 @@ input, select {
     border-radius: 10px;
     background-color: #fff;
     transition: border-color 0.3s ease;
+}
+
+/* Ensure dropdown does not overflow */
+select {
+    width: 100%;
+    max-width: 300px;
 }
 
 /* Focus states */
@@ -182,17 +188,16 @@ button[type="submit"]:hover {
 
 /* Fix Footer Alignment */
 footer {
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     text-align: center;
     font-size: 0.9rem;
     color: #ff4081;
     font-weight: 600;
-    padding: 10px 0;
+    padding: 15px;
+    margin-top: 20px;
 }
 
+/* Ensure the footer does not overlap */
 footer a {
     color: #ff4081;
     text-decoration: none;
