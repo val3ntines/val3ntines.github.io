@@ -7,12 +7,18 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ffdde1, #ee9ca7);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+}
+
+/* Make the page scrollable */
+html, body {
+    height: 100%;
+    overflow-y: auto;
 }
 
 /* Cute Container */
@@ -22,9 +28,9 @@ body {
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: float 3s ease-in-out infinite;
     width: 90%;
     max-width: 600px;
+    margin: 20px auto;
 }
 
 /* Floating Animation */
@@ -109,8 +115,8 @@ label {
 input, select {
     padding: 12px;
     font-size: 1.2rem;
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 15px;
     border: 2px solid #ff80ab;
     border-radius: 10px;
@@ -121,7 +127,7 @@ input, select {
 /* Ensure dropdown does not overflow */
 select {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 /* Focus states */
@@ -180,21 +186,29 @@ button[type="submit"]:hover {
 /* Mobile Responsive */
 @media (max-width: 600px) {
     h1 { font-size: 2.5rem; }
-    .container { width: 90%; padding: 25px; }
+    .container { width: 95%; padding: 25px; }
     button { font-size: 1.2rem; padding: 12px 30px; }
     form { width: 100%; }
     input, select { width: 100%; max-width: none; }
 }
 
-/* Fix Footer Alignment */
+/* FIX FOOTER */
 footer {
-    position: relative;
+    position: relative; /* Ensures it's below content */
     text-align: center;
     font-size: 0.9rem;
     color: #ff4081;
     font-weight: 600;
     padding: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Keep footer at bottom */
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Ensure the footer does not overlap */
