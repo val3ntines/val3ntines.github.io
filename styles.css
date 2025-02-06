@@ -11,7 +11,7 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #ffdde1, #ee9ca7);
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Cute Container */
