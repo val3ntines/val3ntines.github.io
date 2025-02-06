@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Date Plan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Plan Our Valentine's Date!</h1>
+    <form id="dateForm">
+      <label for="date">Choose a Date:</label>
+      <input type="date" id="date" name="date" required>
+      <br>
+      <label for="time">Choose a Time:</label>
+      <input type="time" id="time" name="time" required>
+      <br>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" placeholder="Enter location" required>
+      <br>
+      <label for="activity">What should we do?</label>
+      <select id="activity" name="activity" required>
+        <option value="Dinner">Dinner 🍽️</option>
+        <option value="Movie">Movie 🎬</option>
+        <option value="Walk">Walk in the Park 🌳</option>
+        <option value="Surprise">Surprise Me! 🎉</option>
+        <option value="Others">Others</option>
+      </select>
+      <br>
+      <div id="otherActivityContainer" style="display: none;">
+        <label for="otherActivity">Describe your activity:</label>
+        <input type="text" id="otherActivity" name="otherActivity" placeholder="Enter your activity">
+      </div>
+      <br>
+      <button type="submit">Save as Picture</button>
+    </form>
+    <div id="output"></div>
+  </div>
+  <script src="invitation.js"></script>
+  <footer>
+    <p>Made with 💖 by <a href="https://instagram.com/toxicf1sh" target="_blank">@toxicf1sh</a></p>
+  </footer>
+</body>
+</html>
